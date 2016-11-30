@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item"><h4>Contacts:</h4>
+    <app-contact-item class="list-group-item" *ngFor="let contact of contacts; let i = index" [contact]="contact" [contactId]="i"></app-contact-item>
+  </li>
+</ul>
