@@ -12,6 +12,7 @@ import {ContactService} from "./contacts/contact.service";
 import {ContactItemComponent} from "./contacts/contact-item.component";
 import {ContactStartComponent} from "./contacts/contact-start.component";
 import {ContactsEditComponent} from "./contacts-edit/contacts-edit.component";
+import {FilterPipe} from "./contacts/filter.pipe";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ContactsEditComponent} from "./contacts-edit/contacts-edit.component";
     ContactDetailsComponent,
     ContactItemComponent,
     ContactStartComponent,
-    ContactsEditComponent
+    ContactsEditComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

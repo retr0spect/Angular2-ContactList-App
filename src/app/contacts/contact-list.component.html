@@ -1,8 +1,17 @@
-<ul class="list-group">
-  <li class="list-group-item"><h4>Contacts:</h4>
-    <app-contact-item class="list-group-item" *ngFor="let contact of contacts; let i = index" [contact]="contact" [contactId]="i"></app-contact-item>
-  </li>
-</ul>
+<!--<input class="form-control" placeholder="Search Your Contacts" type="text" [(ngModel)]="filterFn">-->
+
+<div class="col-xs-12 panel-body">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h4>Contacts:</h4>
+      <div class="list-group-item" *ngFor="let contact of contacts; let i = index" [routerLink]="i"
+           routerLinkActive="active">
+        {{contact.firstName}} {{ contact.lastName }}
+      </div>
+    </li>
+  </ul>
+</div>
+
 
 <div class="col-xs-12">
   <button class="btn btn-primary" (click)="onEdit()">Add New Contact</button>

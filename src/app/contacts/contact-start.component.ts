@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
   selector: 'app-contact-start',
   template: `
-    <h1>Please select a Contact</h1>
+    <div class="list-group-item text-center">Please select a contact to view</div>
   `,
   styles: []
 })

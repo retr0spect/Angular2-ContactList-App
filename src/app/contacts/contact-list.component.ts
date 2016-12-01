@@ -9,6 +9,7 @@ import {Router} from "@angular/router";
 })
 export class ContactListComponent implements OnInit {
 
+  // @Input() filterFn: string = '';
   contacts: Contact[] = [];
 
   constructor(private contactService: ContactService,
