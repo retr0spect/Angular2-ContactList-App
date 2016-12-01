@@ -1,8 +1,8 @@
 import {Component, OnInit, OnDestroy} from "@angular/core";
 import {Subscription} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Contact} from "./contact";
-import {ContactService} from "./contact.service";
+import {Contact} from "../model/contact";
+import {ContactService} from "../contact.service";
 
 @Component({
   selector: 'app-contact-details',

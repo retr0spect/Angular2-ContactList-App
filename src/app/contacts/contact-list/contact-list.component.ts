@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
-import {ContactService} from "./contact.service";
-import {Contact} from "./contact";
 import {Router} from "@angular/router";
+import {Contact} from "../model/contact";
+import {ContactService} from "../contact.service";
 
 @Component({
   selector: 'app-contact-list',

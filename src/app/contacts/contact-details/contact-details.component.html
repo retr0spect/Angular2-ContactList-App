@@ -1,7 +1,11 @@
 <div class="list-group-item">
   <h3 class="text-center">{{selectedContact?.firstName}} {{selectedContact?.lastName}}</h3>
-  <p>address: {{selectedContact?.address}}</p>
-  <p>phone: {{selectedContact?.phoneNumber}}</p>
+  <div class="col-xs-12">
+    <img src="{{ selectedContact?.imageUrl }}" alt="" class="img-responsive center-block">
+    <br>
+  </div>
+  <h5 class="text-center">Address: {{selectedContact?.address}}</h5>
+  <h5 class="text-center">Phone: {{selectedContact?.phoneNumber}}</h5>
 </div>
 <br>
 <div class="row">

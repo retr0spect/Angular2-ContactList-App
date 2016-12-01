@@ -6,13 +6,12 @@ import {AppComponent} from "./app.component";
 import {HeaderComponent} from "./header/header.component";
 import {ContactsComponent} from "./contacts/contacts.component";
 import {routing} from "./app.routes";
-import {ContactListComponent} from "./contacts/contact-list.component";
-import {ContactDetailsComponent} from "./contacts/contact-details.component";
 import {ContactService} from "./contacts/contact.service";
-import {ContactItemComponent} from "./contacts/contact-item.component";
 import {ContactStartComponent} from "./contacts/contact-start.component";
-import {ContactsEditComponent} from "./contacts-edit/contacts-edit.component";
 import {FilterPipe} from "./contacts/filter.pipe";
+import {ContactListComponent} from "./contacts/contact-list/contact-list.component";
+import {ContactDetailsComponent} from "./contacts/contact-details/contact-details.component";
+import {ContactsEditComponent} from "./contacts/contacts-edit/contacts-edit.component";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import {FilterPipe} from "./contacts/filter.pipe";
     ContactsComponent,
     ContactListComponent,
     ContactDetailsComponent,
-    ContactItemComponent,
     ContactStartComponent,
     ContactsEditComponent,
     FilterPipe
