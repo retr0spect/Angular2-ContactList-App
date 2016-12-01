@@ -3,3 +3,7 @@
     <app-contact-item class="list-group-item" *ngFor="let contact of contacts; let i = index" [contact]="contact" [contactId]="i"></app-contact-item>
   </li>
 </ul>
+
+<div class="col-xs-12">
+  <button class="btn btn-primary" (click)="onEdit()">Add New Contact</button>
+</div>

@@ -1,11 +1,12 @@
-import {Routes, RouterModule} from "@angular/router";
-import {ContactsComponent} from "./contacts.component";
+import {Routes} from "@angular/router";
 import {ContactDetailsComponent} from "./contact-details.component";
+import {ContactStartComponent} from "./contact-start.component";
+import {ContactsEditComponent} from "../contacts-edit/contacts-edit.component";
 
-const CONTACT_ROUTES: Routes = [
-  {path: '', component: ContactsComponent, children: [
-    {path: ':id', component: ContactDetailsComponent}
-  ]}
+export const CONTACT_ROUTES: Routes = [
+  {path: '', component: ContactStartComponent},
+  {path: 'new', component: ContactsEditComponent},
+  {path: ':id', component: ContactDetailsComponent},
+  {path: ':id/edit', component: ContactsEditComponent}
 ];
 
-export const contactRouting = RouterModule.forChild(CONTACT_ROUTES);

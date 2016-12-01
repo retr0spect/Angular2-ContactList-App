@@ -1,6 +1,6 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy} from "@angular/core";
 import {Subscription} from "rxjs";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Contact} from "./contact";
 import {ContactService} from "./contact.service";
 
@@ -15,7 +15,9 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   private contactIndex: number;
   selectedContact: Contact;
 
-  constructor(private route: ActivatedRoute, private contactService: ContactService) {
+  constructor(private route: ActivatedRoute,
+              private contactService: ContactService,
+              private router: Router) {
   }
 
   ngOnInit() {
@@ -26,6 +28,16 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
       }
     )
   }
+
+  onDelete() {
+    this.contactService.deleteContact(this.selectedContact);
+    this.router.navigate(['/contacts']);
+  }
+
+  onEdit() {
+    this.router.navigate(['/contacts', this.contactIndex, 'edit']);
+  }
+
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
